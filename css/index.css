@@ -1,0 +1,157 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  padding-top: 230px;
+  font-family: 'Source Sans Pro',sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1e2e2e;
+  background-color: #f2f2f2;
+}
+
+h1,h2,h3,h4,h5 {
+  font-weight: 600;
+}
+
+a:link,
+a:visited {
+  color: #9ab839;
+}
+
+a:hover,
+a:active {
+  color: #9ab839;
+  text-decoration: none;
+}
+
+.product {
+  background-color: #fff;
+  padding: 0 1em;
+  margin: 1em 0;
+  overflow: hidden;
+  box-shadow: 0 0 1em rgba(0,0,0,0.1);
+  fornt-size: 200;
+}
+
+.logo {
+  content:url(https://www.pngkit.com/png/full/403-4032967_apple-logo-logos-orange-apple-logo-png.png);
+  width: 90px;
+  height: 100px;
+}
+
+.wrapper {
+  height: auto !important;
+  height: 100%;
+}
+
+
+
+.inner-wrap {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 9999;
+  background-color: #214a3f;
+}
+.site-header .inner-wrap {
+  display: table;
+  height: 120px;
+}
+.site-header h1,
+.site-header ul {
+  display: table-cell;
+  vertical-align: middle;
+}
+.site-header h1 {
+  margin: 0;
+  font-weight: 600;
+  color: #fff;
+}
+.site-header ul {
+  font-size: 16px;
+  text-align: right;
+  color: #b2c4d8;
+}
+.site-header ul li {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+
+
+
+.site-toolbar {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 9999;
+  background-color: #9ab839;
+}
+.site-toolbar .notifications {
+  float: left;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 7px;
+  font-weight: 600;
+  text-align: right;
+  opacity: 0;
+}
+.site-toolbar .notifications span {
+  color: #434f5b;
+}
+
+.content-wrap {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.filter-grid {
+  position: fixed;
+  top: 150px;
+  left: 0;
+  z-index: 8999;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #434f5b;
+}
+.filter-grid .filter-cell {
+  float: left;
+  width: 25%;
+  padding: 7px;
+}
+.filter-grid select {
+  font-weight: 600;
+}
+
+.product-grid {
+  width: 100%;
+}
+
+
+.site-footer {
+  height: 230px;
+  padding-top: 30px;
+  padding-left: 7px;
+  font-size: 18px;
+  color: white;
+  background-color: #1e2e2e;
+}
+
+.site-footer table td {
+  vertical-align: top;
+  width: 25%;
+}
