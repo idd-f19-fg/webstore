@@ -61,6 +61,25 @@ const products = [
 
 /************* FUNCTIONS *************/
 
+function isColor(prod){
+  if (this == '') {
+    return true;
+  }
+    else if (prod.color == this) {
+    return true;
+      } else {
+        return false;
+    }
+}
+
+function isPrice(prod){
+  if (prod.price < this) {
+    return true;
+      } else {
+        return false;
+    }
+}
+
 function getProductsAsHtmlString(product) {
 
   let soldout = " ";
@@ -68,9 +87,12 @@ function getProductsAsHtmlString(product) {
     soldout = '<small style="color:red">SOLD OUT!</small>'
   }
   
+  let prodimg = " ";
+  prodimg = product.img;
+  
   return `<article class="product">
             <h3>${product.name} ${soldout}</h3>
-            <img src="${product.img}" style="padding: 0 30px 10px 0; float: left;">
+            <img src="${prodimg}" style="padding: 0 30px 10px 0; float: left;">
             <ul>
               <li>Color: <strong>${product.color}</strong></li>
               <li>Description: <strong>${product.desc}</strong></li>
@@ -92,7 +114,17 @@ function getProductsAsHtmlString(product) {
               <input type="radio" name="star" class="star" id="fourHalf" value="4.5"><label for="fourHalf" data-value="4.5"></label>
               <input type="radio" name="star" class="star" id="five" value="5.0"><label for="five" data-value="5.0"></label>
             </div>
-          </article>`;
+</article>`;
+}
+
+function loadProdColor(event){
+  const theColor = event.target.value;
+  renderProducts(products.filter(isColor, theColor));
+}
+
+function loadProdPrice(event){
+  const thePrice = event.target.value;
+  renderProducts(products.filter(isPrice, thePrice));
 }
 
 function renderProducts(arrToRender) {
@@ -104,3 +136,6 @@ function renderProducts(arrToRender) {
 /************* EXECUTE *************/
 
 renderProducts(products);
+
+document.getElementById('prodColor').addEventListener('change', loadProdColor);
+document.getElementById('prodPrice').addEventListener('change', loadProdPrice);
