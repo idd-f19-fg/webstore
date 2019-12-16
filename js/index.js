@@ -48,6 +48,18 @@ function getProductsAsHtmlString(product) {
               </li>
               <li>Category of Goods: <strong>${product.category}</strong></li>
             </ul>
+            <div class="rating">
+              <input type="radio" name="star" class="star" id="half" value="0.5"><label for="half" data-value="0.5"></label>
+              <input type="radio" name="star" class="star" id="one" value="1.0"><label for="one" data-value="1.0"></label>
+              <input type="radio" name="star" class="star" id="oneHalf" value="1.5"><label for="oneHalf" data-value="1.5"></label>
+              <input type="radio" name="star" class="star" id="two" value="2.0"><label for="two" data-value="2.0"></label>
+              <input type="radio" name="star" class="star" id="twoHalf" value="2.5"><label for="twoHalf" data-value="2.5"></label>
+              <input type="radio" name="star" class="star" id="three" value="3.0"><label for="three" data-value="3.0"></label>
+              <input type="radio" name="star" class="star" id="threeHalf" value="3.5"><label for="threeHalf" data-value="3.5"></label>
+              <input type="radio" name="star" class="star" id="four" value="4.0"><label for="four" data-value="4.0"></label>
+              <input type="radio" name="star" class="star" id="fourHalf" value="4.5"><label for="fourHalf" data-value="4.5"></label>
+              <input type="radio" name="star" class="star" id="five" value="5.0"><label for="five" data-value="5.0"></label>
+            </div>
           </article>`;
 }
 
