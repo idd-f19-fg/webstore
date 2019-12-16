@@ -28,6 +28,33 @@ const products = [
     qty: 22,
     color: `Black`,
     category: `something`
+  },{
+    id: 4,
+    name: `Book Cover`,
+    img: `https://picsum.photos/200`,
+    desc: `Suspendisse eget urna sed nisi dictum bibendum at nec odio. Aenean vitae vehicula metus. Duis finibus sodales erat, ac dapibus metus.`,
+    price: `100`,
+    qty: 22,
+    color: `Black`,
+    category: `something`
+  },{
+    id: 5,
+    name: `Cell Phone`,
+    img: `https://picsum.photos/200`,
+    desc: `Suspendisse eget urna sed nisi dictum bibendum at nec odio. Aenean vitae vehicula metus. Duis finibus sodales erat, ac dapibus metus.`,
+    price: `600`,
+    qty: 0,
+    color: `Blue`,
+    category: `something`
+  },{
+    id: 6,
+    name: `Luxury Jacket`,
+    img: `https://picsum.photos/200`,
+    desc: `Suspendisse eget urna sed nisi dictum bibendum at nec odio. Aenean vitae vehicula metus. Duis finibus sodales erat, ac dapibus metus.`,
+    price: `10`,
+    qty: 22,
+    color: `Red`,
+    category: `something`
   }
 ]
 
