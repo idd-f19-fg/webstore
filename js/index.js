@@ -34,10 +34,13 @@ const products = [
 
 /************* FUNCTIONS *************/
 
-function getProductsAsHtmlString(product) {
-
+  let soldout = "";
+  if (product.qty < 1){
+    soldout = '<small>SOLD OUT!</small>'
+  }
+  
   return `<article class="product">
-            <h3>${product.name}</h3>
+            <h3>${product.name} ${soldout}</h3>
             <img src="${product.img}" style="padding: 0 30px 10px 0; float: left;">
             <ul>
               <li>Color: <strong>${product.color}</strong></li>
