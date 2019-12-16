@@ -7,7 +7,7 @@ const products = [
     img: `https://picsum.photos/200`,
     desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit sed consequat tincidunt lorem sit amet lobortis.`,
     price: `100`,
-    qty: 2,
+    qty: 0,
     color: `Blue`,
     category: `something`
   },{
@@ -34,7 +34,7 @@ const products = [
     img: `https://picsum.photos/200`,
     desc: `Suspendisse eget urna sed nisi dictum bibendum at nec odio. Aenean vitae vehicula metus. Duis finibus sodales erat, ac dapibus metus.`,
     price: `100`,
-    qty: 22,
+    qty: 0,
     color: `Black`,
     category: `something`
   },{
@@ -61,7 +61,9 @@ const products = [
 
 /************* FUNCTIONS *************/
 
-  let soldout = "";
+function getProductsAsHtmlString(product) {
+
+  let soldout = " ";
   if (product.qty < 1){
     soldout = '<small>SOLD OUT!</small>'
   }
