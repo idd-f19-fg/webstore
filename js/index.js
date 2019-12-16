@@ -65,7 +65,7 @@ function getProductsAsHtmlString(product) {
 
   let soldout = " ";
   if (product.qty < 1){
-    soldout = '<small>SOLD OUT!</small>'
+    soldout = '<small style="color:red">SOLD OUT!</small>'
   }
   
   return `<article class="product">
