@@ -154,3 +154,41 @@ a:active {
   vertical-align: top;
   width: 25%;
 }
+
+:root {
+  --full: url('https://imgur.com/R4OMwSC.png');
+  --hollow: url('https://imgur.com/ef1zazc.png');
+}
+.rating {
+  display: flex;
+}
+.star {
+  display: none;
+}
+.star:indeterminate + label, 
+.star:checked ~ label {
+  background-image: var(--hollow);
+}
+label, .star:checked + label {
+  display: inline-block;
+  width: 1.34375em; /* half the image width */
+  height: 2.5625em; /* the image height */
+  background-image: var(--full);
+  background-size: 2.6875em; /* the image width */
+  background-repeat: no-repeat;
+}
+label:nth-of-type(even) {
+  background-position: -1.34375em;
+}
+label:not(:last-child):nth-of-type(even) {
+  padding-right: 0.25em;
+}
+
+/* Optional hover over to show "filled upto" */
+.rating:hover > .star:indeterminate + label,
+.rating:hover > .star + label {
+  background-image: var(--full);
+}
+.rating:hover > .star + label:hover ~ label {
+  background-image: var(--hollow);
+}
